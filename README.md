@@ -1,3 +1,3 @@
-# Green Fox Meetup - Mobile dev presentation
+# Green Fox Academy - Karolyi Dev presentation
 
 Made with [Reveal.js](http://revealjs.com/)
