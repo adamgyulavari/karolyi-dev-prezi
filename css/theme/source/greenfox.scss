@@ -1,0 +1,184 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #007335;
+$headingColor: #3cb878;
+$headingTextShadow: none;
+$backgroundColor: #FFFFFF;
+$linkColor: #3cb878;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #5DF0AD;
+$smallPadding: 15px;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+	
+	.vote {
+		color: $backgroundColor;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+	}
+
+	.vote-yellow {
+		background: $yellow;
+	}
+
+	.vote-violet {
+		background: $violet;
+	}
+
+	.vote-green {
+		background: $green;
+	}
+
+	.vote-red {
+		background: $orange;
+	}
+
+	.vote-blue {
+		background: $blue;
+	}
+
+	.round {
+		border-radius: 100%;
+		width: 200px;
+	}
+
+	.margin-top {
+		margin-top: 300px;
+	}
+
+	.dark-bg {
+		background: $mainColor;
+	}
+
+	span.dark-bg {
+		box-shadow: $smallPadding 0 0 $mainColor, -$smallPadding 0 0 $mainColor;
+	}
+
+	.light-bg {
+		background: $headingColor;
+	}
+
+	span.light-bg {
+		box-shadow: $smallPadding 0 0 $headingColor, -$smallPadding 0 0 $headingColor;
+	}
+
+	.left {
+		text-align: left;
+		position: absolute;
+		left: 0;
+	}
+
+	.minus-top {
+		top: -300px;
+	}
+
+	.margin-minus-top {
+		margin-top: -300px;
+	}
+
+	.small {
+		font-size: small;
+		margin-top: 540px;
+	}
+
+	blockquote {
+		text-align: left;
+		box-shadow: none;
+		border-left: 2px solid $headingColor;
+		padding: 0 20px;
+		width: initial;
+		color: $headingColor;
+		font-style: normal;
+		
+		&.left {
+			margin: 20px 0;
+		}
+	}
+
+	.inverted {
+		h1, h2, h3, h4, h5, h6 {
+			color: $backgroundColor;
+		}
+		blockquote {
+			color: $backgroundColor;
+			border-left-color: $backgroundColor;
+		}
+	}
+
+	.clickable-option {
+		color: $backgroundColor;
+		font-size: 1.5em;
+		padding: 3%;
+		margin: 1%;
+		width: 40%;
+		border: none;
+		border-radius: 5px;
+		&:disabled {
+			opacity: 0.5;
+		}
+	}
+
+	.results {
+		display: none;
+	}
+
+	img.no-border {
+		border: none;
+	}
+}
+@media (min-width: 1281px) {
+	.clickable-option {
+		display: none;
+	}
+
+	.results {
+		display: block !important;
+		width: 100%;
+	}
+}
