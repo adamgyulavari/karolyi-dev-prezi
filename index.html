@@ -1,271 +1,553 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
-	<title>Mobile dev - slides</title>
-	
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/greenfox.css">
-	
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/monokai.css">
-	
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Working in IT - slides</title>
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/greenfox.css">
+  
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css">
+  
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
 </head>
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section data-background="images/pixelblack.jpg">
-				<h1>Mobile Developer</h1>
-			</section>
-			<section>
-				<img src="images/aze.png" alt="Adam Gyulavari" class="round">
-				<h1>Gyulavári Ádám</h1>
-				<h4>ex android developer</h4>
-				<p>
-					Now mostly mentoring in any technology
-				</p>
-			</section>
-			<section data-background="images/dev.png" class="inverted">
-				<h2 class="left minus-top"><span class="dark-bg">So what does a mobile application developer do?</span></h2>
-			</section>
-			<section data-background="images/devices.jpg"
-				data-background-size="contain"
-				data-background-position="0 0">
-			<h2 class="margin-top">Have you ever thought about...</h2>
-			<p class="fragment">
-				...how many mobile devices are being used today?
-			</p>
-		</section>
-		<section data-background="#3cb878" class="inverted" data-transition="zoom">
-			<h1>NO?</h1>
-		</section>
-		<section>
-			<h2>Let's play a game then</h2>
-			<p>
-				Scan this QR code and open it in the browser.
-			</p>
-			<img src="images/qr-github.png" alt="https://adamgyulavari.github.io/mobile-dev-slides">
-		</section>
-		<section>
-			<h1>Now you should see this too</h1>
-			<p>If you've missed the QR code, just type <code>dev.mobil.ninja</code> in your browser</p>
-		</section>
-		<section>
-			<h2>So how many types of Android devices are there?</h2>
-			<div class="left results">
-				<p id="vote-for-1a" data-vote-name="first" data-votes="0" data-vote-display="Around 100">
-					<span class="vote vote-red">0</span>
-					<span class="result-display">Around 100</span>
-				</p>
-				<p id="vote-for-1b" data-vote-name="first" data-votes="0" data-vote-display="Around 5000">
-					<span class="vote vote-blue">0</span>
-					<span class="result-display">Around 5000</span>
-				</p>
-				<p id="vote-for-1c" data-vote-name="first" data-votes="0" data-vote-display="Around 25000">
-					<span class="vote vote-yellow">0</span>
-					<span class="result-display">Around 25000</span>
-				</p>
-				<p id="vote-for-1d" data-vote-name="first" data-votes="0" data-vote-display="Around a million">
-					<span class="vote vote-green">0</span>
-					<span class="result-display">Around a million</span>
-				</p>
-			</div>
-			<div class="votes">
-				<button class="clickable-option vote-red" data-option-name="vote-for-1a">~100</button>
-				<button class="clickable-option vote-blue" data-option-name="vote-for-1b">~5000</button>
-				<button class="clickable-option vote-yellow" data-option-name="vote-for-1c">~25000</button>
-				<button class="clickable-option vote-green" data-option-name="vote-for-1d">~a million</button>
-			</div>
-		</section>
-		<section data-background="images/over24000.png" class="inverted">
-			<h2 class="left minus-top fragment"><span class="light-bg">Over 24000, right?</span></h2>
-		</section>
-		<section data-background="#007335" class="inverted">
-			<h1>So honestly what do we do mostly?</h1>
-		</section>
-		<section data-background="images/peter.gif" data-background-size="auto" data-background-repeat="repeat"></section>
-		<section data-background="images/phones.jpg"
-				data-background-size="contain"
-				data-background-position="bottom">
-			<div class="margin-minus-top">
-				<h2>Playtime</h2>
-			</div>
-		</section>
-		<section data-background="images/farm.png" class="inverted">
-			<h2 class="left minus-top"><span class="dark-bg">Mobile device farms</span></h2>
-		</section>
-		<section data-background="images/filling-the-glass.gif">
-			<h3>Know your physics</h3>
-		</section>
-		<section data-background="images/bundes2.png" data-background-size="contain" class="inverted">
-			<h3><span class="light-bg">Feel the game</span></h3>
-		</section>
-		<section data-background="images/playboy.png" data-background-size="contain">
-			<h3><span>Or something else</span></h3>
-			<p class="small">thanks supercharge.io for the images</p>
-		</section>
-		<section>
-			<h1>Seems complicated</h1>
-		</section>
-		<section>
-			<h2>Let's play another</h2>
-			<p>
-				Scan it again, or just open <code>dev.mobile.ninja</code>
-			</p>
-			<img src="images/qr-github.png" alt="https://adamgyulavari.github.io/mobile-dev-slides">
-		</section>
-		<section>
-			<h3>How many times I had to write a <code>Login with Facebook</code> button?</h3>
-			<div class="left results">
-				<p id="vote-for-2a" data-vote-name="second" data-votes="0" data-vote-display="Exactly ZERO">
-					<span class="vote vote-red">0</span>
-					<span class="result-display">Exactly zero</span>
-				</p>
-				<p id="vote-for-2b" data-vote-name="second" data-votes="0" data-vote-display="Around 10">
-					<span class="vote vote-blue">0</span>
-					<span class="result-display">Around 10</span>
-				</p>
-				<p id="vote-for-2c" data-vote-name="second" data-votes="0" data-vote-display="Around 50">
-					<span class="vote vote-yellow">0</span>
-					<span class="result-display">Around 50</span>
-				</p>
-				<p id="vote-for-2d" data-vote-name="second" data-votes="0" data-vote-display="Over a hundred">
-					<span class="vote vote-green">0</span>
-					<span class="result-display">Over a hundred</span>
-				</p>
-			</div>
-			<div class="votes">
-				<button class="clickable-option vote-red" data-option-name="vote-for-2a">0</button>
-				<button class="clickable-option vote-blue" data-option-name="vote-for-2b">10</button>
-				<button class="clickable-option vote-yellow" data-option-name="vote-for-2c">50</button>
-				<button class="clickable-option vote-green" data-option-name="vote-for-2d">&gt; 100</button>
-			</div>
-			</section>
-		<section data-background="images/success.jpg">
-			<blockquote class="minus-top left">From where comes the success?</blockquote>
-		</section>
-		<section>
-			<h2>the unpredictable</h2>
-			<img src="images/iamrich.jpg" alt="I am Rich app">
-		</section>
-		<section data-background="images/winvenn.png" data-background-color="#d9d9d9" data-background-size="contain"></section>
-		<section data-background="#3cb878" class="inverted">
-			<h1>The little things</h1>
-		</section>
-		<section data-background="images/columbo.jpg"></section>
-		<section>
-				<h2>So one last question</h2>
-				<p>
-					Scan it again, or just open <code>dev.mobile.ninja</code>
-				</p>
-				<img src="images/qr-github.png" alt="https://adamgyulavari.github.io/mobile-dev-slides">
-			</section>
-			<section>
-					<h2>How interesting my presentation was?</h2>
-					<div class="left results">
-						<p id="vote-for-3a" data-vote-name="third" data-votes="0" data-vote-display="Very">
-							<span class="vote vote-red">0</span>
-							<span class="result-display">Very</span>
-						</p>
-						<p id="vote-for-3b" data-vote-name="third" data-votes="0" data-vote-display="Loved it">
-							<span class="vote vote-blue">0</span>
-							<span class="result-display">Loved it</span>
-						</p>
-						<p id="vote-for-3c" data-vote-name="third" data-votes="0" data-vote-display="Superb">
-							<span class="vote vote-yellow">0</span>
-							<span class="result-display">Superb</span>
-						</p>
-						<p id="vote-for-3d" data-vote-name="third" data-votes="0" data-vote-display="Interesting?">
-							<span class="vote vote-green">0</span>
-							<span class="result-display">Interesting?</span>
-						</p>
-					</div>
-					<div class="votes">
-						<button class="clickable-option vote-red" data-option-name="vote-for-3a">Very</button>
-						<button class="clickable-option vote-blue" data-option-name="vote-for-3b">Loved it</button>
-						<button class="clickable-option vote-yellow" data-option-name="vote-for-3c">Superb</button>
-						<button class="clickable-option vote-green" data-option-name="vote-for-3d">Interesting?</button>
-					</div>
-					</section>
-					<section data-background="images/pixelblack.png">
-						<h1>Any questions?</h1>
-					</section>
-	</div>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background="images/pixelblack.jpg">
+        <h1>Working in it</h1>
+      </section>
+      <section>
+        <img src="images/aze.png" alt="Adam Gyulavari" class="round">
+        <h1>Gyulavári Ádám</h1>
+        <h4>ex android developer</h4>
+        <p>
+          Now mostly mentoring at Green Fox Academy
+        </p>
+      </section>
+      <section>
+        <h2 class="inverted"><span class="dark-bg">Questions to be answered</span></h2>
+        <ul>
+          <li><h4>What does a programmer do?</h4></li>
+          <li><h4>Why maths is importante? Why not?</h4></li>
+          <li><h4>How youtube works?</h4></li>
+          <li><h4>How to work from the Canary islands?</h4></li>
+          <li><h4>Should you get to a university?</h4></li>
+        </ul>
+        <aside data-markdown class="notes">
+          - angol lesz a kontent a diakon
+          - meg neha angol szavak, bocsi
+          - sikits, ha nem erted
+          - de amugy meg ertsd
+          - fontos az angol, bar a spanyol sem rossz
+          - de azt meg en nem beszelem
+          - kb 1.5md-an beszelnek angolul
+          - kb 15m-an magyarul
+          - ezt nehez kontextusba tenni
+        </aside>
+      </section>
+      <section data-background="images/angol-gummy.jpg"
+        data-background-position="center"
+        data-background-size="300px">
+        <aside data-markdown class="notes">
+          - ha egy ember egy gumi maci
+          - akkor az angol beszelok
+          - ha mar epp vizilabda eb van
+        </aside>
+      </section>
+      </section>
+      <section data-background="images/angol-pool.jpg">
+        <aside data-markdown class="notes">
+          - egy 50m-es versenymedenceben fernek el
+          - mig a magyarul beszelok egy nagyobb kadban
+          - uuu vagy az hajlekonyfalu otthoni kerek medence!
+        </aside>
+      </section>
+      <section data-background="images/dev.png" class="inverted">
+        <h2 class="left minus-top"><span class="dark-bg">So what does a software developer do?</span></h2>
+      </section>
+      <section>
+        <h2>what people think programming is vs. how it actually is</h2>
+        <iframe width="560" height="315" data-src="https://www.youtube.com/embed/HluANRwPyNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+      <section data-background="#3cb878" class="inverted" data-transition="zoom">
+        <h1>Other common stereotypes</h1>
+        <aside data-markdown class="notes">
+          - amugy most mar igazabol tudod
+          - mit csinal egy programozo (googlizik)
+          - hogy mukodik a youtube
+          - az elobb mutattam meg
+          - play gomb => elindul
+          - de visszamehetek megegyszer
+          - tudjuk miert fontos a matek (gumimacik a medenceben)
+        </aside>
+      </section>
+      <section data-background="images/st-nerd.jpg">
+        <aside data-markdown class="notes">
+          - nagyon regi sztereotipia
+          - sosem volt igazan igaz
+          - green fox social media ellenpelda
+          - de legalabb vicces
+        </aside>
+      </section>
+      <section data-background="images/st-wow.png">
+        <aside data-markdown class="notes">
+          - ez meg sosem volt programozo
+          - ez egy lelket vesztett wow troll
+          - abban mondjuk biztos ugyes
+        </aside>
+      </section>
+      <section data-background="images/st-margaret.gif" data-background-position="0 0">
+        <aside data-markdown class="notes">
+          - erre valszeg nem szamitottatok
+          - ki tudja ki o?
+          - ki tudja mi az?
+          - regen tudomany volt, tudosok csinaltak, keves gep
+          - na de akkor milyen tenyleg egy programozo?
+        </aside>
+      </section>
+      <section data-background="#3cb878" class="inverted" data-transition="slide-in zoom-out">
+        <h1>Then how does a programmer look like?</h1>
+      </section>
+      <section data-background="images/gf.jpg">
+        <aside data-markdown class="notes">
+          - teljesen normalis hetkoznapi kep
+          - egyaltalan nem beallitott
+          - mindenkinek a telefonja csinal ilyen kepet
+          - barkirol
+          - de amugy
+          - kicsi/nagy
+          - fekete/feher
+          - fiu/lany
+          - es ezek barmilyen tetszoleges kombinacioja
+        </aside>
+      </section>
+      <section data-background="#3cb878" class="inverted" data-transition="slide-in zoom-out">
+        <h1>And what do they do?</h1>
+      </section>
+      <section data-background="images/thinking.png">
+        <aside data-markdown class="notes">
+          - problemakat old meg
+          - gondolkodik
+          - lego / kirakos / puzzle / mintailleszt
+          - neha szo szerint
+          - megkapod a mintat, igy kell kineznie
+        </aside>
+      </section>
+      <section data-background="images/maths.jpg" class="inverted" data-transition="slide-in zoom-out">
+        <h1><span class="dark-bg">So why do you need math?</span></h1>
+        <aside data-markdown class="notes">
+          - pontosan ezert
+          - a matek problemamegoldasra tanit
+          - mintafelismeresre tanit
+          - szovegertesre tanit
+          - neha vannak nagyon bonyolult szamitasok
+          - amiket el kell vegezni, de tudjatok ki fogja elvegezni?
+          - a szamitogep
+        </aside>
+      </section>
+      <section>
+        <h2>Let's play a game then</h2>
+        <p>
+          Scan this QR code and open it in the browser.
+        </p>
+        <img src="images/qr-karolyi.png" alt="https://karolyi.mobil.ninja">
+      </section>
+      <section>
+        <h1>Now you should see this too</h1>
+        <p>If you've missed the QR code, just type <code>karolyi.mobil.ninja</code> in your browser</p>
+      </section>
+      <section>
+        <h2>How much is 9007199254740991 + 4?</h2>
+        <div class="left results">
+        <p id="vote-for-1a" data-vote-name="first" data-votes="0" data-vote-display="9007199254740991">
+          <span class="vote vote-red">0</span>
+          <span class="result-display">9007199254740991</span>
+        </p>
+        <p id="vote-for-1b" data-vote-name="first" data-votes="0" data-vote-display="9007199254740994">
+          <span class="vote vote-blue">0</span>
+          <span class="result-display">9007199254740994</span>
+        </p>
+        <p id="vote-for-1c" data-vote-name="first" data-votes="0" data-vote-display="9007199254740995">
+          <span class="vote vote-yellow">0</span>
+          <span class="result-display">9007199254740995</span>
+        </p>
+        <p id="vote-for-1d" data-vote-name="first" data-votes="0" data-vote-display="9007199254740996">
+          <span class="vote vote-green">0</span>
+          <span class="result-display">9007199254740996</span>
+        </p>
+      </div>
+      <div class="votes">
+        <button class="clickable-option vote-red" data-option-name="vote-for-1a">...991</button>
+        <button class="clickable-option vote-blue" data-option-name="vote-for-1b">...994</button>
+        <button class="clickable-option vote-yellow" data-option-name="vote-for-1c">...995</button>
+        <button class="clickable-option vote-green" data-option-name="vote-for-1d">...996</button>
+      </div>
+      <aside data-markdown class="notes">
+        - oke nezzuk meg, ki tud szamolni
+        - js szamok console
+        - szoval azert meg nem fenyeget
+        - a mesterseges intelligencia vilaguralom
+      </aside>
+    </section>
+    <section data-background="images/jutub.jpg" data-background-size="600px">
+      <aside data-markdown class="notes">
+        - az egyik legnagyobb es legosszetettebb
+          feladat videot streamelni megbizhatoan
+        - ennel sokkal egyszerubb mondjuk egy
+          szoveges/kepes posztot megjeleniteni
+        - pizzat rendelni
+        - commentet irni
+        - likeokat szamolni
+      </aside>
+    </section>
+    <section>
+      <pre><code class="hljs">
+import React, { useState } from 'react';
+  
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;main&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/main&gt;
+  );
+}</code></pre>
+      <aside data-markdown class="notes">
+        - ez azert mar eleg durva
+        - egy szot sem ertek belole
+        - vagy megis?
+        - codepen
+        - ket feladat:
+        - legyen ebbol like gomb!
+        - legyen dislike gomb!
+      </aside>
+    </section>
+    <section data-background="images/jutub-download.gif" data-background-size="800px">
+      <aside data-markdown class="notes">
+        - ki torrentezett mar?
+        - persze szigoruan legalis tartalmat
+        - tanulmanyi celbol
+        - ki tudja hogy mukodik? miert P2P?
+        - kis csomagok masoktol => ingyen elerheto tanulmany
+        - ugyanigy mukodik amugy minden a neten
+        - csak nem haveroktol
+        - hanem a szerverekrol jon a csomag
+        - kis darabokban
+        - a streamelt video is
+        - megall, aztan egyszercsak kurvanagyot ugrik?
+        - szetdarabolom, aztan elkezdem kuldeni... nincs visszaigazolas
+      </aside>
+    </section>
+    <section>
+      <h1>That reminds me</h1>
+      <img src="images/login.png" class="fragment">
+      <aside data-markdown class="notes">
+        - youtubrol jut eszembe
+        - lattatok mar mindenfele oldalon
+        - ilyet?
+        - na, akkor legyen egy tippelos megint
+      </aside>
+    </section>
+    <section>
+      <h2>Let's play another</h2>
+      <p>
+        Scan it again, or just open <code>karolyi.mobile.ninja</code>
+      </p>
+      <img src="images/qr-karolyi.png" alt="https://karolyi.mobil.ninja">
+    </section>
+    <section>
+      <h3>How many times I had to write a <code>Login with Facebook</code> button?</h3>
+      <div class="left results">
+        <p id="vote-for-2a" data-vote-name="second" data-votes="0" data-vote-display="Exactly ZERO">
+          <span class="vote vote-red">0</span>
+          <span class="result-display">Exactly zero</span>
+        </p>
+        <p id="vote-for-2b" data-vote-name="second" data-votes="0" data-vote-display="Around 10">
+          <span class="vote vote-blue">0</span>
+          <span class="result-display">Around 10</span>
+        </p>
+        <p id="vote-for-2c" data-vote-name="second" data-votes="0" data-vote-display="Around 50">
+          <span class="vote vote-yellow">0</span>
+          <span class="result-display">Around 50</span>
+        </p>
+        <p id="vote-for-2d" data-vote-name="second" data-votes="0" data-vote-display="Over a hundred">
+          <span class="vote vote-green">0</span>
+          <span class="result-display">Over a hundred</span>
+        </p>
+      </div>
+      <div class="votes">
+        <button class="clickable-option vote-red" data-option-name="vote-for-2a">0</button>
+        <button class="clickable-option vote-blue" data-option-name="vote-for-2b">10</button>
+        <button class="clickable-option vote-yellow" data-option-name="vote-for-2c">50</button>
+        <button class="clickable-option vote-green" data-option-name="vote-for-2d">&gt; 100</button>
+      </div>
+      <aside data-markdown class="notes">
+        - fent van az interneteken
+        - letoltom es berakom abba, amit epp csinalok
+        - kesz
+        - a legtobb dolog mar biztosan megvan irva
+        - ha nem is tudod egy az egybe hasznalni
+        - minimalisan kell atirni
+        - de egyebkent kutatas es legozas
+      </aside>
+      </section>
+      <section data-background-color="#3cb878" class="inverted">
+        <h2>So a programmer needs so far</h2>
+        <ul>
+          <li class="fragment"><h4>Logical thinking</h4></li>
+          <li class="fragment"><h4>Internet</h4></li>
+          <li class="fragment"><h4>Good googling skills</h4></li>
+          <li class="fragment"><h4>A computer</h4></li>
+        </ul>
+        <aside data-markdown class="notes">
+          - ahhoz hogy felismerje a problemakat
+          - es tudjon legozni
+          - hogy legyen honnan letolteni a legodarabokat
+          - es feltolteni az eredmenyt
+          - hogy megtalalja a legodarabokat
+          - amin ezt az egeszet csinalja
+          - es ezek mindegyike hol elerheto?
+        </aside>
+      </section>
+      <section data-background="images/earth.png">
+        <aside data-markdown class="notes">
+          - vagyis pontosabban
+        </aside>
+      </section>
+      <section data-background="images/kanari.jpg">
+        <aside data-markdown class="notes">
+          - a kanari szigetekrol
+          - sok munkahely helyileg es idoben is kotott
+          - sok meg nem
+          - bar az elejen nehez megtanulni sajat magad felugyelni az idodet,
+          sokkal kenyelmesebb egy ido utan
+          - ehhez az kell, hogy amugy tudd is kezelni az idodet
+          - egy fejleszto gyakorlatilag barhonnan dolgozhat
+        - es a legtobben elnek is ezzel
+        - 2019 osszesen 2 honapot toltottem Magyarorszagon
+        - ugy hogy egy magyar cegnel dolgozom
+        - persze van, aki nem szeret utazni
+        - de a sajat idobeosztas az kiraly, baratok, csalad, gyerek
+      </aside>
+    </section>
+    <section>
+      <h3>This brings us to the</h3>
+      <h2 class="fragment">University</h2>
+      <aside data-markdown class="notes">
+        - miert menj?
+        - oszinten?
+      </aside>
+    </section>
+    <section data-background="images/paarty.jpg">
+      <aside data-markdown class="notes">
+        - nyilvan hatalmas buli
+        - rengeteg uj barat
+        - rengeteg uj elmeny
+      </aside>
+    </section>
+    <section>
+      <h3>Seriously though</h3>
+      <aside data-markdown class="notes">
+        - az egyetlen szakma az orvosi
+        - mit mond a vegzett mernok...
+        - nem jok az egyetemek itthon
+        - mindenfele nemzetkozi rangsorban a legjobb
+          esetleg 500-ban van egy magyar egyetem
+        - a szakmak tobbsege 10-15 even belul teljesen eltunik
+        - egy remek lehetoseg az ujrakezdesre
+        - az elszakadasra, onallosodasra
+        - es van, amikor tanitanak is hasznos dolgokat
+        - tokre nem tudom, nem jartam mindegyiken
+      </aside>
+    </section>
+    <section data-background="images/bme.png" data-background-size="500px">
+      <aside data-markdown class="notes">
+        - nev nelkul ide jartam
+        - 2 szakot is vegeztem
+        - az elsorol fogalmam sem volt mit takar
+        - nem jartam rosszul, de azert jelentkeztem
+        - mert szerettem gepen jatszani, pffff
+        - de vicces hogy benne van a logoban 1782
+        - az egesz oktatasi rendszer olyan regi (amugy klebersberg)
+        - ahogy a kozoktatasi rendszer is
+        - regi dolgokat tanitanak, regi modszerekkel
+        - es nagyon lassan alkalmazkodnak
+      </aside>
+    </section>
+    <section data-background="images/gf-logo.png" data-background-size="400px">
+      <aside data-markdown class="notes">
+        - pl programozni nalunk is meg lehet tanulni
+        - 4 honap alatt
+        - nem 5 ev
+        - teljesen mas modszertannal
+        - teljesen mas tudast is kapsz
+        - egyiksem jobb/rosszabb
+        - szerintem amit mi adunk mondjuk
+        - egy palyakezdonek sokkal hasznosabb
+        - mint amit az egyetemtol kap
+      </aside>
+    </section>
+    <section data-background="images/konnekt.jpg" class="inverted">
+      <h3><span class="dark-bg">Konnekt</span></h3>
+      <aside data-markdown class="notes">
+        - de ha teljesen bizonytalan vagy
+        - van am segitseg
+        - kerdezz meg barkit
+        - egy par evvel idosebbet
+        - egy fiatalabb tanarodat
+        - engem
+        - mentorprogram
+        - konnektlive
+        - gap year
+      </aside>
+    </section>
+    <section data-background="images/5dolog.png" class="inverted">
+      <h3><span class="dark-bg">What does a programmer do?</span></h3>
+      <h4 class="fragment"><span class="dark-bg">Plays lego and google a lot</span></h4>
+    </section>
+    <section data-background="images/5dolog.png" class="inverted">
+      <h3><span class="dark-bg">Why maths is importante? Why not?</span></h3>
+      <h4 class="fragment"><span class="dark-bg">To learn logical thinking</span></h4>
+      <h4 class="fragment"><span class="dark-bg">Not for the specifics</span></h4>
+    </section>
+    <section data-background="images/5dolog.png" class="inverted">
+      <h3><span class="dark-bg">How youtube works?</span></h3>
+      <h4 class="fragment"><span class="dark-bg">Complicated</span></h4>
+    </section>
+    <section data-background="images/5dolog.png" class="inverted">
+      <h3><span class="dark-bg">How to work from the Canary islands?</span></h3>
+      <h4 class="fragment"><span class="dark-bg">Be a programmer</span></h4>
+    </section>
+    <section data-background="images/5dolog.png" class="inverted">
+      <h3><span class="dark-bg">Should you get to a university?</span></h3>
+      <h4 class="fragment"><span class="dark-bg">Depends</span></h4>
+      <aside class="notes" data-markdown>
+        - foleg rajtad
+        - onallosodni meg bulizni mashol is lehet
+        - igazabol barhol, ami nem otthon van anyanal/apanal
+        - dolgozz kozossegben
+      </aside>
+    </section>
+    
+    <section data-background="images/columbo.jpg"></section>
+    <section>
+        <h2>So one last question</h2>
+        <p>
+          Scan it again, or just open <code>karolyi.mobile.ninja</code>
+        </p>
+        <img src="images/qr-karolyi.png" alt="https://karolyi.mobil.ninja">
+      </section>
+      <section>
+          <h2>How interesting my presentation was?</h2>
+          <div class="left results">
+            <p id="vote-for-3a" data-vote-name="third" data-votes="0" data-vote-display="Very">
+              <span class="vote vote-red">0</span>
+              <span class="result-display">Very</span>
+            </p>
+            <p id="vote-for-3b" data-vote-name="third" data-votes="0" data-vote-display="Loved it">
+              <span class="vote vote-blue">0</span>
+              <span class="result-display">Loved it</span>
+            </p>
+            <p id="vote-for-3c" data-vote-name="third" data-votes="0" data-vote-display="Superb">
+              <span class="vote vote-yellow">0</span>
+              <span class="result-display">Superb</span>
+            </p>
+            <p id="vote-for-3d" data-vote-name="third" data-votes="0" data-vote-display="Interesting?">
+              <span class="vote vote-green">0</span>
+              <span class="result-display">Interesting?</span>
+            </p>
+          </div>
+          <div class="votes">
+            <button class="clickable-option vote-red" data-option-name="vote-for-3a">Very</button>
+            <button class="clickable-option vote-blue" data-option-name="vote-for-3b">Loved it</button>
+            <button class="clickable-option vote-yellow" data-option-name="vote-for-3c">Superb</button>
+            <button class="clickable-option vote-green" data-option-name="vote-for-3d">Interesting?</button>
+          </div>
+          </section>
+          <section data-background="images/pixelblack.jpg">
+            <h1>Any questions?</h1>
+          </section>
+  </div>
 </div>
 
 <script src="js/reveal.js"></script>
 <script>
-	// More info about config & dependencies:
-	// - https://github.com/hakimel/reveal.js#configuration
-	// - https://github.com/hakimel/reveal.js#dependencies
-	let getVotes = (node) => parseInt(node.getAttribute('data-votes'))
-	document.addEventListener('voteArrived', (event) => {
-		let node = document.getElementById(event.detail)
-		let currentVotes = getVotes(node) + 1
-		let count = 0
-		node.setAttribute('data-votes', currentVotes)
-		document.querySelectorAll(`[data-vote-name=${node.getAttribute('data-vote-name')}]`).forEach(item => count += getVotes(item))
-		document.querySelectorAll(`[data-vote-name=${node.getAttribute('data-vote-name')}]`).forEach(item => {
-			let bar = item.querySelector('.vote')
-			let display = item.querySelector('.result-display')
-			let percent = 100 * getVotes(item) / count
-			let text = `${item.getAttribute('data-vote-display')} (${getVotes(item)} votes)`
-			console.log(text)
-			if(percent > 60) {
-				bar.innerText = `${getVotes(item)} - ${item.getAttribute('data-vote-display')}`
-				display.innerText = `${percent.toFixed(0)}%`
-			} else {
-				bar.innerText = getVotes(item)
-				display.innerText = `${percent.toFixed(0)}% ${item.getAttribute('data-vote-display')}`
-			}
-			if(percent > 0) {
-				bar.setAttribute('style', `width:${percent/100*85}%;`)
-			}
-		})
-	})
-	
-	document.querySelectorAll(".clickable-option").forEach(item => {
-		item.addEventListener("click", (e) => {
-			let nodeId = event.target.getAttribute("data-option-name")
-			let node = document.getElementById(nodeId)
-			document.querySelector( '.reveal' ).dispatchEvent(new CustomEvent("vote", {detail: nodeId}))
-			e.target.parentElement.querySelectorAll('.clickable-option').forEach(option => option.setAttribute("disabled", "disabled"))
-		})
-	});
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  let getVotes = (node) => parseInt(node.getAttribute('data-votes'))
+  document.addEventListener('voteArrived', (event) => {
+    let node = document.getElementById(event.detail)
+    let currentVotes = getVotes(node) + 1
+    let count = 0
+    node.setAttribute('data-votes', currentVotes)
+    document.querySelectorAll(`[data-vote-name=${node.getAttribute('data-vote-name')}]`).forEach(item => count += getVotes(item))
+    document.querySelectorAll(`[data-vote-name=${node.getAttribute('data-vote-name')}]`).forEach(item => {
+      let bar = item.querySelector('.vote')
+      let display = item.querySelector('.result-display')
+      let percent = 100 * getVotes(item) / count
+      let text = `${item.getAttribute('data-vote-display')} (${getVotes(item)} votes)`
+      console.log(text)
+      if(percent > 60) {
+        bar.innerText = `${getVotes(item)} - ${item.getAttribute('data-vote-display')}`
+        display.innerText = `${percent.toFixed(0)}%`
+      } else {
+        bar.innerText = getVotes(item)
+        display.innerText = `${percent.toFixed(0)}% ${item.getAttribute('data-vote-display')}`
+      }
+      if(percent > 0) {
+        bar.setAttribute('style', `width:${percent/100*85}%;`)
+      }
+    })
+  })
+  
+  document.querySelectorAll(".clickable-option").forEach(item => {
+    item.addEventListener("click", (e) => {
+      let nodeId = event.target.getAttribute("data-option-name")
+      let node = document.getElementById(nodeId)
+      document.querySelector( '.reveal' ).dispatchEvent(new CustomEvent("vote", {detail: nodeId}))
+      e.target.parentElement.querySelectorAll('.clickable-option').forEach(option => option.setAttribute("disabled", "disabled"))
+    })
+  });
 
-	Reveal.initialize({
-		controls: false,
-		touch: false,
-		multiplex: {
-			// Example values. To generate your own, see the socket.io server instructions.
-			secret: '15596599160907949212', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-			id: '6b9e222cae8112bd', // Obtained from socket.io server
-			url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
-		},
-		dependencies: [
-		{ src: 'plugin/markdown/marked.js' },
-		{ src: 'plugin/markdown/markdown.js' },
-		{ src: 'plugin/notes/notes.js', async: true },
-		{ src: 'plugin/highlight/highlight.js', async: true },
-		{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
-		{ src: 'plugin/multiplex/master.js', async: true },
-		{ src: 'plugin/multiplex/client.js', async: true },
-		{ src: 'plugin/multiplex/vote.js', async: true },
-		// and if you want speaker notes
-		// { src: 'plugin/notes-server/client.js', async: true }
-		]
-	});
+  Reveal.initialize({
+    controls: false,
+    touch: false,
+    multiplex: {
+      // Example values. To generate your own, see the socket.io server instructions.
+      secret: '15596599160907949212', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+      id: '6b9e222cae8112bd', // Obtained from socket.io server
+      url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+    },
+    dependencies: [
+    { src: 'plugin/markdown/marked.js' },
+    { src: 'plugin/markdown/markdown.js' },
+    { src: 'plugin/notes/notes.js', async: true },
+    { src: 'plugin/highlight/highlight.js', async: true },
+    { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+    { src: 'plugin/multiplex/master.js', async: true },
+    { src: 'plugin/multiplex/client.js', async: true },
+    { src: 'plugin/multiplex/vote.js', async: true },
+    // and if you want speaker notes
+    // { src: 'plugin/notes-server/client.js', async: true }
+    ]
+  });
 </script>
 </body>
 </html>

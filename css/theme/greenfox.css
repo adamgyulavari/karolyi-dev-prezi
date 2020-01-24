@@ -342,7 +342,7 @@ body {
   .reveal blockquote.left {
     margin: 20px 0; }
 
-.reveal .inverted h1, .reveal .inverted h2, .reveal .inverted h3, .reveal .inverted h4, .reveal .inverted h5, .reveal .inverted h6 {
+.reveal .inverted h1, .reveal .inverted h2, .reveal .inverted h3, .reveal .inverted h4, .reveal .inverted h5, .reveal .inverted h6, .reveal .inverted span {
   color: #FFFFFF; }
 
 .reveal .inverted blockquote {
